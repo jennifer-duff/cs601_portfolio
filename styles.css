@@ -80,6 +80,7 @@ main{
 .caption{
     font-size: 11pt;
     font-style: italic;
+    text-align: center;
 }
 
 .subtitle{
@@ -154,14 +155,25 @@ h2.project-title{
     padding: 40px;
 }
 
-.resume-wrapper section:first-of-type h2.resume-section-title{
+.resume-section-title{
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 8px 0; /*Makes emoji align with base of text underline*/
+}
+
+.resume-wrapper section:first-of-type .resume-section-title h2{
     margin-top: 0;
 }
 
-h2.resume-section-title{
+.resume-section-title h2{
     margin: 60px 0 0 0;
     font-size: 26pt;
     text-decoration: 6px solid underline var(--accent-color-1);
+}
+
+.resume-emoji{
+    height: 34pt;
+    margin: 0 0 -8px 10px; /*Makes emoji align with base of text underline*/
 }
 
 h3.resume-subsection-title{
@@ -188,4 +200,27 @@ h3.resume-subsection-title{
     margin: 0;
     padding: 0;
     list-style: inside '— ';
+}
+
+/* Contact Page */
+.contact-content{
+    display: flex;
+}
+
+.contact-content figure{
+    margin-right: 30px;
+    width: 30%;
+}
+
+.contact-content figure img{
+    width: 100%;
+}
+
+table, th, td{
+    border: 1px solid var(--contrast-color);
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 5px 10px;
 }
