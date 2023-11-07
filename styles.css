@@ -1,0 +1,65 @@
+
+:root{
+    --monospace-font: 'IBM Plex Mono', 'Courier New', monospace;
+    --bg-color: #00252E;
+    --contrast-color: #FDE8D8;
+    --accent-color-1: #ffcd70;
+    --accent-color-2: #86b8c2;
+    --accent-color-3: #e779b0;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--contrast-color);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--monospace-font);
+    font-size: 13pt;
+    font-weight: 200;
+    height: 100vh;
+    line-height: 175%;
+}
+
+a{
+    color: var(--accent-color-2);
+    text-decoration: underline solid 4px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+}
+
+.menu li{
+    display: inline;
+    font-weight: 600;
+    margin: 0 15px;
+}
+
+.menu li a:hover,
+.menu li a:focus{
+    color: var(--accent-color-3);
+    transition: 0.15s ease-in-out;
+}
+
+main{
+    flex: 1 1 auto;
+}
+
+.caption{
+    font-size: 11pt;
+    font-style: italic;
+}
+
+footer{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
