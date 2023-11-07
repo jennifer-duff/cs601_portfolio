@@ -27,7 +27,7 @@ body{
 }
 
 h1{
-    font-size: 38pt;
+    font-size: 42pt;
 }
 
 a{
@@ -93,10 +93,22 @@ main{
 
 footer{
     align-items: center;
-    border-top: 1px dashed var(--contrast-color);
+    border-top: 1px dashed var(--accent-color-1);
     display: flex;
     justify-content: center;
+    margin-top: 50px;
     padding: 30px 10px;
+}
+
+/* Home Page */
+#home-page-content{
+    display: flex;
+    align-items: center;
+}
+
+#home-page-content img{
+    width: 50px;
+    margin-right: 10px;
 }
 
 /* About Page */
@@ -116,6 +128,11 @@ footer{
     display: flex;
     flex-direction: column;
     margin: 40px 0 0 0;
+}
+
+.tonks-video video{
+    border: 1px solid var(--contrast-color);
+    box-shadow: var(--box-shadow);
 }
 
 /* Portfolio Page */
