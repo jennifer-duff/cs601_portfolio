@@ -45,6 +45,10 @@ header{
     margin: 10px 10px 25px 10px;
 }
 
+.logo{
+    width: 25%;
+}
+
 nav{
     display: flex;
     justify-content: flex-end;
@@ -121,5 +125,18 @@ h2.project-title{
 h3.subtitle{
     font-weight: 200;
     font-size: 12pt;
+    margin-top: 0;
+}
+
+.project-image{
+    width: 50%;
+    margin-right: 40px;
+}
+
+.project-content{
+    display: flex;
+}
+
+.project-content article p{
     margin-top: 0;
 }
