@@ -1,3 +1,4 @@
+/* Default global styles */
 :root{
     --monospace-font: 'IBM Plex Mono', 'Courier New', monospace;
     --bg-color: #001C2E;
@@ -66,6 +67,7 @@ nav{
 main{
     /* makes `main` take up remaining space between header and footer */
     flex: 1 1 auto;
+    padding: 0 10px;
 }
 
 .caption{
@@ -78,5 +80,46 @@ footer{
     border-top: 1px dashed var(--contrast-color);
     display: flex;
     justify-content: center;
-    padding: 30px 0;
+    padding: 30px 10px;
+}
+
+/* About Page */
+.about-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.headshot{
+    float: inline-start;
+    padding: 0 30px 10px 0;
+    width: 300px;
+}
+
+.tonks-video{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 0 0;
+}
+
+/* Portfolio Page */
+.portfolio-section{
+    border: 1px solid var(--contrast-color);
+    box-shadow: 10px 10px 0 var(--contrast-color);
+    margin: 0 10px 40px 0;
+    padding: 20px;
+}
+
+h2.project-title{
+    margin: 0 0 5px 0;
+}
+
+.project-name{
+    font-style: italic;
+}
+
+h3.subtitle{
+    font-weight: 200;
+    font-size: 12pt;
+    margin-top: 0;
 }
