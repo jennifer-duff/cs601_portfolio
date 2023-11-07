@@ -1,11 +1,15 @@
-
 :root{
     --monospace-font: 'IBM Plex Mono', 'Courier New', monospace;
-    --bg-color: #00252E;
+    --bg-color: #001C2E;
+    --bg-color-lighter: lighten(var(--bg-color), 50%);
     --contrast-color: #FDE8D8;
     --accent-color-1: #ffcd70;
     --accent-color-2: #86b8c2;
     --accent-color-3: #e779b0;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 body{
@@ -18,6 +22,11 @@ body{
     font-weight: 200;
     height: 100vh;
     line-height: 175%;
+    margin: 0;
+}
+
+h1{
+    font-size: 30pt;
 }
 
 a{
@@ -26,8 +35,13 @@ a{
 }
 
 header{
+    background: var(--bg-color-lighter);
+    border: 1px solid var(--contrast-color);
+    box-shadow: 10px 10px 0px var(--contrast-color);
     display: flex;
     justify-content: space-between;
+    padding: 10px 20px;
+    margin: 10px 10px 25px 10px;
 }
 
 nav{
@@ -39,6 +53,7 @@ nav{
 .menu li{
     display: inline;
     font-weight: 600;
+    font-size: 16pt;
     margin: 0 15px;
 }
 
@@ -49,6 +64,7 @@ nav{
 }
 
 main{
+    /* makes `main` take up remaining space between header and footer */
     flex: 1 1 auto;
 }
 
@@ -59,6 +75,7 @@ main{
 
 footer{
     align-items: center;
+    border-top: 1px dashed var(--contrast-color);
     display: flex;
     justify-content: center;
     padding: 30px 0;
