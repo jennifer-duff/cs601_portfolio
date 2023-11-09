@@ -5,8 +5,6 @@
     --bg-color: #001C2E;
     --contrast-color: #FDE8D8;
     --accent-color-1: #E87979;
-    --accent-color-2: #ffcd70; 
-    /* --accent-color-3: #e779b0; */
     --box-shadow: 10px 10px 0 var(--accent-color-1);
 }
 
@@ -54,8 +52,6 @@ h4{
     font-weight: 100;
 }
 
-
-
 a{
     color: var(--contrast-color);
     text-decoration: underline solid 4px;
@@ -81,7 +77,7 @@ header{
 }
 
 .logo{
-    width: 400px;
+    width: 350px;
 }
 
 nav{
@@ -143,34 +139,6 @@ ul{
     padding-left: 1.25rem;
 }
 
-.accent-text{
-    color: var(--accent-color-1);
-    font-weight: 500;
-}
-
-.carrot-list li{
-    list-style: none;
-}
-
-.carrot-list li::before{
-    content: '> ';
-    color: var(--accent-color-1);
-    font-weight: 500;
-}
-
-ul{
-    margin: 0;
-    padding: 0;
-    list-style: inside '— ';
-    text-indent: -1.25rem;
-    padding-left: 1.25rem;
-}
-
-/* li::before{
-    content: '—';
-    padding: 0 1rem 0 0;
-} */
-
 footer{
     align-items: center;
     border-top: 1px dashed var(--accent-color-1);
@@ -189,22 +157,17 @@ footer{
 }
 
 #intro-box{
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-}
-
-#intro-box{
     align-items: center;
     background-color: var(--bg-color);
     border: 1px solid var(--accent-color-1);
     box-shadow: var(--box-shadow);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 500px;
-    height: 300px;
     font-size: 1.75rem;
+    justify-content: center;
+    height: 300px;
+    margin-top: 100px;
+    width: 500px;
 }
 
 #intro-box img{
@@ -310,8 +273,6 @@ h2.project-title{
     margin-top: 0;
 }
 
-
-
 .resume-section-title h2{
     margin: 60px 0 0 0;
     text-decoration: 6px solid underline var(--accent-color-1);
@@ -328,12 +289,6 @@ h2.project-title{
 
 h3.resume-subsection-title{
     margin-bottom: 10px;
-}
-
-.resume-wrapper h4{
-    font-size: 14pt;
-    font-weight: 400;
-    margin: 0 0 10px 0;
 }
 
 .skills-section{
