@@ -31,6 +31,10 @@ h1, h2, h3, h4{
     font-family: var(--sanserif-font);
 }
 
+h1, h2, h3, h4{
+    font-family: var(--sanserif-font);
+}
+
 h1{
     font-size: 3.2rem;
 }
@@ -49,6 +53,7 @@ h4{
     font-size: 1.25rem;
     font-weight: 100;
 }
+
 
 
 a{
@@ -138,6 +143,34 @@ ul{
     padding-left: 1.25rem;
 }
 
+.accent-text{
+    color: var(--accent-color-1);
+    font-weight: 500;
+}
+
+.carrot-list li{
+    list-style: none;
+}
+
+.carrot-list li::before{
+    content: '> ';
+    color: var(--accent-color-1);
+    font-weight: 500;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: inside '— ';
+    text-indent: -1.25rem;
+    padding-left: 1.25rem;
+}
+
+/* li::before{
+    content: '—';
+    padding: 0 1rem 0 0;
+} */
+
 footer{
     align-items: center;
     border-top: 1px dashed var(--accent-color-1);
@@ -150,6 +183,12 @@ footer{
 /* ------------ Home Page ------------ */
 .home-content{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#intro-box{
     justify-content: center;
     align-items: center;
     margin-top: 100px;
@@ -289,6 +328,12 @@ h2.project-title{
 
 h3.resume-subsection-title{
     margin-bottom: 10px;
+}
+
+.resume-wrapper h4{
+    font-size: 14pt;
+    font-weight: 400;
+    margin: 0 0 10px 0;
 }
 
 .skills-section{
