@@ -1,6 +1,7 @@
 /* Default global styles */
 :root{
     --monospace-font: 'IBM Plex Mono', 'Courier New', monospace;
+    --sanserif-font: 'Inter', 'Helvetica Nue', sans-serif;
     --bg-color: #001C2E;
     --contrast-color: #FDE8D8;
     --accent-color-1: #E87979;
@@ -26,9 +27,29 @@ body{
     margin: 0;
 }
 
-h1{
-    font-size: 42pt;
+h1, h2, h3, h4{
+    font-family: var(--sanserif-font);
 }
+
+h1{
+    font-size: 3.2rem;
+}
+
+h2{
+    font-size: 2.15rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+h4{
+    font-size: 1.25rem;
+    font-weight: 100;
+}
+
 
 a{
     color: var(--contrast-color);
@@ -50,7 +71,7 @@ header{
     box-shadow: var(--box-shadow);
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 20px 20px;
     margin: 10px 10px 25px 10px;
 }
 
@@ -60,7 +81,9 @@ header{
 
 nav{
     display: flex;
+    font-family: var(--sanserif-font);
     justify-content: flex-end;
+    align-items: center;
     width: 75%;
 }
 
@@ -84,11 +107,35 @@ main{
 }
 
 .subtitle{
+    font-family: var(--monospace-font);
     font-weight: 200;
-    font-size: 12pt;
+    font-size: 1.1rem;
     margin-top: 0;
     text-transform: uppercase;
     line-height: 100%;
+}
+
+.accent-text{
+    color: var(--accent-color-1);
+    font-weight: 500;
+}
+
+.carrot-list li{
+    list-style: none;
+}
+
+.carrot-list li::before{
+    content: '> ';
+    color: var(--accent-color-1);
+    font-weight: 500;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: inside '— ';
+    text-indent: -1.25rem;
+    padding-left: 1.25rem;
 }
 
 footer{
@@ -101,14 +148,56 @@ footer{
 }
 
 /* Home Page */
-#home-page-content{
+.home-content{
     display: flex;
+    justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
-#home-page-content img{
-    width: 50px;
-    margin-right: 10px;
+#intro-box{
+    align-items: center;
+    background-color: var(--bg-color);
+    border: 1px solid var(--accent-color-1);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    font-size: 24pt;
+    margin: 0 5% 0 0;
+}
+
+#intro-box img{
+    height: 30px;
+}
+
+#intro-box div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 0 -20%;
+}
+
+#hello-text{
+    margin: 0 0 10px 20px ;
+}
+
+#name-text{
+    margin: 10px 0 0 25%;
+}
+
+.vertical-line{
+    border: 1px dashed var(--contrast-color);
+    height: 500px;
+    width: 1px;
+}
+
+.home-content .carrot-list{
+    margin: 0 0 0 5%;
+    font-size: 20pt;
+    line-height: 250%;
 }
 
 /* About Page */
@@ -184,7 +273,6 @@ h2.project-title{
 
 .resume-section-title h2{
     margin: 60px 0 0 0;
-    font-size: 26pt;
     text-decoration: 6px solid underline var(--accent-color-1);
 }
 
@@ -194,14 +282,10 @@ h2.project-title{
 }
 
 h3.resume-subsection-title{
-    font-size: 16pt;
-    font-weight: 500;
     margin-bottom: 10px;
 }
 
 .resume-wrapper h4{
-    font-size: 14pt;
-    font-weight: 400;
     margin: 0 0 10px 0;
 }
 
@@ -211,12 +295,6 @@ h3.resume-subsection-title{
 
 .skills-section section:first-of-type{
     margin-right: 10%;
-}
-
-.skills-section ul{
-    margin: 0;
-    padding: 0;
-    list-style: inside '— ';
 }
 
 /* Contact Page */
