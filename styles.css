@@ -152,6 +152,8 @@ main{
 
 .carrot-list li{
     list-style: none;
+    line-height: 150%;
+    margin-bottom: 3rem;
 }
 
 .carrot-list li::before{
@@ -166,6 +168,14 @@ ul{
     list-style: inside '— ';
     text-indent: -1.25rem;
     padding-left: 1.25rem;
+}
+
+li{
+    margin-bottom: 0.75rem;
+}
+
+li:last-of-type{
+    margin-bottom: 0px;
 }
 
 footer{
@@ -207,7 +217,7 @@ footer{
     line-height: 150%;
 }
 
-.vertical-line{
+.line{
     border: 1px dashed var(--contrast-color);
     height: 500px;
     width: 1px;
@@ -389,6 +399,20 @@ th{
         font-size: 12pt;
         margin: 0 0 0 2rem;
     }
+
+    .home-content{
+        flex-direction: column;
+    }
+
+    #intro-box{
+        width: 100%;
+    }
+
+    .line{
+        height: 1px;
+        width: 100%;
+        margin: 15% 0 10% 0;
+    }
 }
 
 @media (max-width: 675px){
@@ -403,6 +427,15 @@ th{
 
     .logo{
         width: 60%;
+    }
+
+    #intro-box p{
+        font-size: 2rem;
+        margin-left: 5%;
+    }
+
+    #intro-box img{
+        height: 4rem;
     }
 
     .headshot{
