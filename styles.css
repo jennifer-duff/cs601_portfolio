@@ -1,11 +1,12 @@
 /* ------------ Default global styles ------------*/
 :root{
     --monospace-font: 'IBM Plex Mono', 'Courier New', monospace;
-    --sanserif-font: 'Inter', 'Helvetica Nue', sans-serif;
-    --bg-color: #001C2E;
-    --contrast-color: #FDE8D8;
-    --accent-color-1: #E87979;
-    --box-shadow: 10px 10px 0 var(--accent-color-1);
+    --sanserif-font: 'stratos', 'Helvetica Nue', sans-serif;
+    --bg-color: #020B1A;
+    --contrast-color: #FFF3DB;
+    --accent-color-1: #CC5E67;
+    --box-shadow-accent: 10px 10px 0 var(--accent-color-1);
+    --box-shadow-neutral: 10px 10px 0 var(--contrast-color);
 }
 
 *{
@@ -34,12 +35,15 @@ h1, h2, h3, h4{
 }
 
 h1{
+    font-weight: 400;
     font-size: 3.2rem;
+    text-decoration: underline solid 0.5rem var(--accent-color-1);
+    margin-bottom: 4rem;
 }
 
 h2{
     font-size: 2.15rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 h3{
@@ -59,7 +63,7 @@ a{
 
 a:hover, a:focus{
     color: var(--accent-color-1);
-    transition: 0.15s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 figure{
@@ -67,17 +71,23 @@ figure{
 }
 
 header{
-    background: var(--bg-color-lighter);
-    border: 1px solid var(--accent-color-1);
-    box-shadow: var(--box-shadow);
+    border: 1px solid var(--contrast-color);
+    box-shadow: var(--box-shadow-neutral);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 20px;
-    margin: 10px 10px 50px 10px;
+    margin: 10px 10px 30px 10px;
 }
 
 .logo{
-    width: 350px;
+    display: flex;
+    width: 250px;
+    transition: 0.2s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.05);
 }
 
 nav{
@@ -90,14 +100,21 @@ nav{
 
 .menu li{
     display: inline;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16pt;
     margin: 0 15px;
 }
 
 .menu a{
-    text-decoration: underline solid 4px var(--accent-color-1);
     text-transform: lowercase;
+    text-decoration: underline solid 4px var(--bg-color);
+    transition: 0.2s ease-in-out;
+}
+
+.menu a:hover,
+.menu a:focus,
+.menu a.current-page{
+    text-decoration: underline solid 4px var(--accent-color-1);
 }
 
 main{
@@ -165,7 +182,7 @@ footer{
     align-items: center;
     background-color: var(--bg-color);
     border: 1px solid var(--accent-color-1);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-accent);
     display: flex;
     flex-direction: column;
     font-size: 1.75rem;
@@ -227,13 +244,13 @@ footer{
 
 .tonks-video video{
     border: 1px solid var(--contrast-color);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-accent);
 }
 
 /* ------------ Portfolio Page ------------ */
 .portfolio-section{
-    border: 1px solid var(--accent-color-1);
-    box-shadow: var(--box-shadow);
+    border: 1px solid var(--contrast-color);
+    box-shadow: var(--box-shadow-neutral);
     margin: 0 10px 100px 0;
     padding: 30px;
 }
@@ -252,7 +269,7 @@ h2.project-title{
 }
 
 .project-image{
-    width: 50%;
+    width: 30%;
     margin-right: 40px;
 }
 
@@ -263,7 +280,7 @@ h2.project-title{
 /* ------------ Resume Page ------------ */
 .resume-wrapper{
     border: 1px solid var(--accent-color-1);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-accent);
     margin: 30px 10px 40px 0;
     padding: 40px;
 }
