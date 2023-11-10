@@ -322,19 +322,6 @@ h3.resume-subsection-title{
 }
 
 /* ------------ Contact Page ------------ */
-.contact-content{
-    display: flex;
-}
-
-.contact-content figure{
-    margin-right: 30px;
-    width: 30%;
-}
-
-.contact-content figure img{
-    width: 100%;
-}
-
 table{
     box-shadow: var(--box-shadow-accent);
 }

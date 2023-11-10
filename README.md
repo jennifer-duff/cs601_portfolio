@@ -3,8 +3,7 @@
 This site is a portfolio designed to display my development skills. It uses many HTML5 semantic elements, including:
 
 - `section`
-- `figure`
-- `figcaption`
+- `article`
 - `img`
 - `video`
 - `table`
