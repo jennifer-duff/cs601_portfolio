@@ -28,6 +28,7 @@ body{
 
 h1, h2, h3, h4{
     font-family: var(--sanserif-font);
+    line-height: 115%;
 }
 
 h1{
@@ -114,7 +115,6 @@ nav{
 }
 
 main{
-    
     flex: 1 1 auto;  /* makes `main` take up remaining space between header and footer */
     padding: 0 15%;
 }
@@ -350,4 +350,20 @@ th{
 
 .where-img{
     height: 1.75rem;
+}
+
+/* ------------ Responsive Adaptations ------------ */
+@media (max-width: 1490px) {
+    main{
+        padding: 0 10%;
+    }
+
+    .project-content{
+        flex-direction: column;
+    }
+
+    .project-image{
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
 }
