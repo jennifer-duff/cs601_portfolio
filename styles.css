@@ -87,19 +87,30 @@ header{
     transform: scale(1.05);
 }
 
+.logo img{
+    width: 100%;
+}
+
 nav{
+    width: 75%;
+    margin: 0 0 0 20px;
+}
+
+.menu{
+    width: 100%;
     display: flex;
     font-family: var(--sanserif-font);
     justify-content: flex-end;
     align-items: center;
-    width: 75%;
+    margin: 0;
+    padding: 0;
 }
 
 .menu li{
     display: inline;
     font-weight: 400;
     font-size: 16pt;
-    margin: 0 15px;
+    margin: 0 0 0 4rem;
 }
 
 .menu a{
@@ -365,5 +376,61 @@ th{
     .project-image{
         width: 100%;
         margin: 0 0 20px 0;
+    }
+}
+
+@media (max-width: 850px) {
+    .logo{
+        width: 25%;
+        min-width: 150px;
+    }
+
+    .menu li{
+        font-size: 12pt;
+        margin: 0 0 0 2rem;
+    }
+}
+
+@media (max-width: 675px){
+    nav{
+        width: auto;
+    }
+
+    .menu{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .logo{
+        width: 60%;
+    }
+
+    .headshot{
+        width: 50%;
+    }
+
+    .skills-section{
+        flex-direction: column;
+    }
+
+    
+    th, td{
+        padding: 1.5vw 2.5vw;
+    }
+    
+    th{
+        font-size: 0.8rem;
+    }
+
+    td{
+        font-size: 0.75rem;
+    }
+
+    .where-cell{
+        min-width: 0px;
+    }
+
+    .where-img{
+        height: 0.75rem;
     }
 }
