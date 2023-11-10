@@ -34,7 +34,6 @@ h1, h2, h3, h4{
 h1{
     font-weight: 400;
     font-size: 5rem;
-    /* text-decoration: underline solid 0.5rem var(--accent-color-1); */
     margin-bottom: 5rem;
 }
 
@@ -63,24 +62,20 @@ a:hover, a:focus{
     transition: 0.2s ease-in-out;
 }
 
-figure{
-    margin: 0;
-}
-
 header{
+    align-items: center;
     border: 1px solid var(--contrast-color);
     box-shadow: var(--box-shadow-neutral);
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 20px;
     margin: 10px 20px 50px 10px;
 }
 
 .logo{
     display: flex;
-    width: 250px;
     transition: 0.2s ease-in-out;
+    width: 250px;
 }
 
 .logo:hover{
@@ -92,18 +87,18 @@ header{
 }
 
 nav{
-    width: 75%;
     margin: 0 0 0 20px;
+    width: 75%;
 }
 
 .menu{
-    width: 100%;
+    align-items: center;
     display: flex;
     font-family: var(--sanserif-font);
     justify-content: flex-end;
-    align-items: center;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .menu li{
@@ -140,9 +135,9 @@ main{
     font-family: var(--monospace-font);
     font-weight: 200;
     font-size: 1.1rem;
+    line-height: 100%;
     margin-top: 0;
     text-transform: uppercase;
-    line-height: 100%;
 }
 
 .accent-text{
@@ -163,11 +158,10 @@ main{
 }
 
 ul{
-    margin: 0;
-    padding: 0;
     list-style: inside '— ';
+    margin: 0;
+    padding: 0 0 0 1.25rem;
     text-indent: -1.25rem;
-    padding-left: 1.25rem;
 }
 
 li{
@@ -189,10 +183,10 @@ footer{
 
 /* ------------ Home Page ------------ */
 .home-content{
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
     height: 100%;
+    justify-content: center;
 }
 
 #intro-box{
@@ -203,8 +197,8 @@ footer{
     display: flex;
     flex-direction: row;
     font-size: 2.25rem;
-    justify-content: center;
     height: 300px;
+    justify-content: center;
     width: 500px;
 }
 
@@ -213,15 +207,15 @@ footer{
 }
 
 #intro-box p{
-    margin: 0 0 0 30px;
     line-height: 150%;
+    margin: 0 0 0 30px;
 }
 
 .line{
     border: 1px dashed var(--contrast-color);
     height: 500px;
-    width: 1px;
     margin: 0 7% 0 7%;
+    width: 1px;
 }
 
 .home-content .carrot-list{
@@ -292,8 +286,8 @@ h2.project-title{
 }
 
 .resume-section-title{
-    display: flex;
     align-items: flex-end;
+    display: flex;
     padding: 0 0 8px 0; /*Makes emoji align with base of text underline*/
 }
 
@@ -384,15 +378,15 @@ th{
     }
 
     .project-image{
-        width: 100%;
         margin: 0 0 20px 0;
+        width: 100%;
     }
 }
 
 @media (max-width: 850px) {
     .logo{
-        width: 25%;
         min-width: 150px;
+        width: 25%;
     }
 
     .menu li{
@@ -410,8 +404,8 @@ th{
 
     .line{
         height: 1px;
-        width: 100%;
         margin: 15% 0 10% 0;
+        width: 100%;
     }
 }
 
@@ -421,8 +415,8 @@ th{
     }
 
     .menu{
-        flex-direction: column;
         align-items: flex-end;
+        flex-direction: column;
     }
 
     .logo{
