@@ -28,17 +28,13 @@ body{
 
 h1, h2, h3, h4{
     font-family: var(--sanserif-font);
-}
-
-h1, h2, h3, h4{
-    font-family: var(--sanserif-font);
+    line-height: 115%;
 }
 
 h1{
     font-weight: 400;
-    font-size: 3.2rem;
-    text-decoration: underline solid 0.5rem var(--accent-color-1);
-    margin-bottom: 4rem;
+    font-size: 5rem;
+    margin-bottom: 5rem;
 }
 
 h2{
@@ -66,43 +62,50 @@ a:hover, a:focus{
     transition: 0.2s ease-in-out;
 }
 
-figure{
-    margin: 0;
-}
-
 header{
+    align-items: center;
     border: 1px solid var(--contrast-color);
     box-shadow: var(--box-shadow-neutral);
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 20px;
-    margin: 10px 20px 30px 10px;
+    margin: 10px 20px 50px 10px;
 }
 
 .logo{
     display: flex;
-    width: 250px;
     transition: 0.2s ease-in-out;
+    width: 250px;
 }
 
 .logo:hover{
     transform: scale(1.05);
 }
 
+.logo img{
+    width: 100%;
+}
+
 nav{
+    margin: 0 0 0 20px;
+    width: 75%;
+}
+
+.menu{
+    align-items: center;
     display: flex;
     font-family: var(--sanserif-font);
     justify-content: flex-end;
-    align-items: center;
-    width: 75%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .menu li{
     display: inline;
     font-weight: 400;
     font-size: 16pt;
-    margin: 0 15px;
+    margin: 0 0 0 4rem;
 }
 
 .menu a{
@@ -118,9 +121,8 @@ nav{
 }
 
 main{
-    /* makes `main` take up remaining space between header and footer */
-    flex: 1 1 auto;
-    padding: 0 10px;
+    flex: 1 1 auto;  /* makes `main` take up remaining space between header and footer */
+    padding: 0 15%;
 }
 
 .caption{
@@ -133,9 +135,9 @@ main{
     font-family: var(--monospace-font);
     font-weight: 200;
     font-size: 1.1rem;
+    line-height: 100%;
     margin-top: 0;
     text-transform: uppercase;
-    line-height: 100%;
 }
 
 .accent-text{
@@ -145,6 +147,8 @@ main{
 
 .carrot-list li{
     list-style: none;
+    line-height: 150%;
+    margin-bottom: 3rem;
 }
 
 .carrot-list li::before{
@@ -154,11 +158,18 @@ main{
 }
 
 ul{
-    margin: 0;
-    padding: 0;
     list-style: inside '— ';
+    margin: 0;
+    padding: 0 0 0 1.25rem;
     text-indent: -1.25rem;
-    padding-left: 1.25rem;
+}
+
+li{
+    margin-bottom: 0.75rem;
+}
+
+li:last-of-type{
+    margin-bottom: 0px;
 }
 
 footer{
@@ -172,10 +183,10 @@ footer{
 
 /* ------------ Home Page ------------ */
 .home-content{
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
     height: 100%;
+    justify-content: center;
 }
 
 #intro-box{
@@ -186,8 +197,8 @@ footer{
     display: flex;
     flex-direction: row;
     font-size: 2.25rem;
-    justify-content: center;
     height: 300px;
+    justify-content: center;
     width: 500px;
 }
 
@@ -196,15 +207,15 @@ footer{
 }
 
 #intro-box p{
-    margin: 0 0 0 30px;
     line-height: 150%;
+    margin: 0 0 0 30px;
 }
 
-.vertical-line{
+.line{
     border: 1px dashed var(--contrast-color);
     height: 500px;
-    width: 1px;
     margin: 0 7% 0 7%;
+    width: 1px;
 }
 
 .home-content .carrot-list{
@@ -258,7 +269,7 @@ h2.project-title{
 }
 
 .project-image{
-    width: 30%;
+    width: 65%;
     margin-right: 40px;
 }
 
@@ -268,15 +279,15 @@ h2.project-title{
 
 /* ------------ Resume Page ------------ */
 .resume-wrapper{
-    border: 1px solid var(--accent-color-1);
-    box-shadow: var(--box-shadow-accent);
+    border: 1px solid var(--contrast-color);
+    box-shadow: var(--box-shadow-neutral);
     margin: 30px 10px 40px 0;
     padding: 40px;
 }
 
 .resume-section-title{
-    display: flex;
     align-items: flex-end;
+    display: flex;
     padding: 0 0 8px 0; /*Makes emoji align with base of text underline*/
 }
 
@@ -311,17 +322,8 @@ h3.resume-subsection-title{
 }
 
 /* ------------ Contact Page ------------ */
-.contact-content{
-    display: flex;
-}
-
-.contact-content figure{
-    margin-right: 30px;
-    width: 30%;
-}
-
-.contact-content figure img{
-    width: 100%;
+table{
+    box-shadow: var(--box-shadow-accent);
 }
 
 table, th, td{
@@ -330,5 +332,119 @@ table, th, td{
 }
 
 th, td{
-    padding: 5px 10px;
+    padding: 20px 30px;
+}
+
+th{
+    font-size: 1.75rem;
+}
+
+.where-cell{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-width: 12rem;
+}
+
+.where-cell p{
+    margin: 0;
+}
+
+.where-img{
+    height: 1.75rem;
+}
+
+/* ------------ Responsive Adaptations ------------ */
+@media (max-width: 1490px) {
+    main{
+        padding: 0 10%;
+    }
+
+    .project-content{
+        flex-direction: column;
+    }
+
+    .project-image{
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+    .logo{
+        min-width: 150px;
+        width: 25%;
+    }
+
+    .menu li{
+        font-size: 12pt;
+        margin: 0 0 0 2rem;
+    }
+
+    .home-content{
+        flex-direction: column;
+    }
+
+    #intro-box{
+        width: 100%;
+    }
+
+    .line{
+        height: 1px;
+        margin: 15% 0 10% 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 675px){
+    nav{
+        width: auto;
+    }
+
+    .menu{
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .logo{
+        width: 60%;
+    }
+
+    #intro-box p{
+        font-size: 2rem;
+        margin-left: 5%;
+    }
+
+    #intro-box img{
+        height: 4rem;
+    }
+
+    .headshot{
+        width: 50%;
+    }
+
+    .skills-section{
+        flex-direction: column;
+    }
+
+    
+    th, td{
+        padding: 1.5vw 2.5vw;
+    }
+    
+    th{
+        font-size: 0.8rem;
+    }
+
+    td{
+        font-size: 0.75rem;
+    }
+
+    .where-cell{
+        min-width: 0px;
+    }
+
+    .where-img{
+        height: 0.75rem;
+    }
 }
