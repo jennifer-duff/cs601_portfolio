@@ -77,6 +77,10 @@ header {
     margin: 10px 20px 8vh 10px;
 }
 
+#menu-icon {
+    width: 30px;
+}
+
 .logo {
     display: flex;
     transition: 0.2s ease-in-out;
@@ -184,6 +188,31 @@ footer {
     justify-content: center;
     margin-top: 50px;
     padding: 30px 10px;
+}
+
+/* hide elements from view, but allow screen readers to access them */
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+.visually-hidden:active,
+.visually-hidden:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: normal;
+    width: auto;
 }
 
 /* ------------ Home Page ------------ */
@@ -407,10 +436,6 @@ th {
 }
 
 @media (max-width: 675px) {
-    nav {
-        width: auto;
-    }
-
     .menu {
         align-items: flex-end;
         flex-direction: column;
