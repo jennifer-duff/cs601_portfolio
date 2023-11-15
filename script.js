@@ -1,3 +1,5 @@
+const MOBILE_WIDTH_BREAKPOINT = 675;
+
 let menuIcon = document.getElementById("menu-icon");
 let nav = document.getElementsByTagName("nav")[0];
 
@@ -13,19 +15,18 @@ window.addEventListener("resize", () => {
 
 // Handle clicks on/off the mobile menu/navigation
 document.addEventListener("click", (event) => {
-    console.log(event.target);
-    console.log(nav.contains(event.target));
-    if (event.target === menuIcon) {
-        showMobileNav();
-    }
-    else if (!nav.contains(event.target)) {
-        console.log('hiding!');
-        hideMobileNav();
+    if (windowWidth <= MOBILE_WIDTH_BREAKPOINT) {
+        if (event.target === menuIcon) {
+            showMobileNav();
+        }
+        else if (!nav.contains(event.target)) {
+            hideMobileNav();
+        }
     }
 });
 
 function showHideMenuIcon(windowWidth) {
-    if (windowWidth <= 675) {
+    if (windowWidth <= MOBILE_WIDTH_BREAKPOINT) {
         menuIcon.style.display = "inline-block";
         nav.classList.add("visually-hidden");
     }
