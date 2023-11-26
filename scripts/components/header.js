@@ -1,5 +1,4 @@
 const header = Vue.createApp({
-    el: "#header",
     template: `
         <a href="index.html" class="logo">
             <img src="./assets/logos/full_logo.svg" alt="JDB Development logo">
@@ -8,7 +7,7 @@ const header = Vue.createApp({
         <nav>
             <ul class="menu">
                 <li v-for="(href, pageName) in pages"><a :class="findCurrentPage(pageName)"
-                        :href="href">{{pageName}}</a>
+                        :onclick="handleNavClick">{{pageName}}</a>
                 </li>
             </ul>
         </nav>
@@ -31,8 +30,10 @@ const header = Vue.createApp({
                 ? "current-page"
                 : "";
         },
-        isCurrentPage: function (pageName) {
-            return this.currentPage === pageName;
+        handleNavClick: function (event) {
+            const newPage = event.target.innerText
+            this.currentPage = newPage;
+            window.location.href = this.pages[newPage];
         }
     }
 });
