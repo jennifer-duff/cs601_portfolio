@@ -23,7 +23,9 @@
         <img id="menu-icon" src="./assets/menu_icon.svg" alt="menu">
         <nav>
             <ul class="menu">
-                <li v-for="(href, pageName) in pages"><a :href="href">{{pageName}}</a></li>
+                <li v-for="(href, pageName) in pages"><a :class="findCurrentPage(pageName)"
+                        :href="href">{{pageName}}</a>
+                </li>
             </ul>
         </nav>
     </header>

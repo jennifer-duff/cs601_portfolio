@@ -11,7 +11,19 @@ const header = Vue.createApp({
                 "contact": "contact.html"
             }
         }
+    },
+    methods: {
+        findCurrentPage: function (pageName) {
+            return this.currentPage === pageName
+                ? "current-page"
+                : "";
+        },
+        isCurrentPage: function (pageName) {
+            return this.currentPage === pageName;
+        }
     }
 });
+
+
 
 header.mount("#header");
