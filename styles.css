@@ -128,6 +128,7 @@ nav {
 }
 
 .menu a {
+    cursor: pointer;
     text-transform: lowercase;
     text-decoration: underline solid 4px var(--bg-color);
     transition: 0.2s ease-in-out;
