@@ -1,9 +1,9 @@
 const header = Vue.createApp({
     template: `
         <a href="index.html" class="logo">
-            <img src="./assets/logos/full_logo.svg" alt="JDB Development logo">
+            <img src="./assets/logos/full_logo.svg" alt="JDB Development logo" width="60%" height="auto">
         </a>
-        <img id="menu-icon" src="./assets/menu_icon.svg" alt="menu">
+        <img id="menu-icon" src="./assets/menu_icon.svg" alt="menu" width="30px" height="auto">
         <nav>
             <ul class="menu">
                 <li v-for="(href, pageName) in pages"><a :class="getClass(pageName)"

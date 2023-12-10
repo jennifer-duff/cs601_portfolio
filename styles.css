@@ -250,6 +250,7 @@ footer {
 
 #intro-box img {
     height: 5.5rem;
+    width: auto;
 }
 
 #intro-box p {
@@ -334,8 +335,8 @@ h2.project-title {
 .resume-section-title {
     align-items: flex-end;
     display: flex;
-    padding: 0 0 8px 0;
     /*Makes emoji align with base of text underline*/
+    padding: 0 0 8px 0;
 }
 
 .resume-wrapper section:first-of-type .resume-section-title h2 {
@@ -349,8 +350,8 @@ h2.project-title {
 
 .resume-emoji {
     height: 34pt;
-    margin: 0 0 -8px 10px;
     /*Makes emoji align with base of text underline*/
+    margin: 0 0 -8px 10px;
 }
 
 .resume-wrapper h3 {
@@ -482,7 +483,6 @@ th {
     .skills-section {
         flex-direction: column;
     }
-
 
     th,
     td {
