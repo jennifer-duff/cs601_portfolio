@@ -13,6 +13,11 @@
     box-sizing: border-box;
 }
 
+/* custom highlight color */
+* ::selection {
+    background-color: var(--accent-color-1);
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--contrast-color);
@@ -67,9 +72,12 @@ a:focus {
     transition: 0.15s ease-in-out;
 }
 
+.emphasis {
+    font-style: italic;
+    font-weight: 500;
+}
 
 /* ------------ Header ------------ */
-
 header {
     align-items: center;
     background-color: var(--bg-color);
@@ -144,8 +152,8 @@ nav {
 }
 
 main {
-    flex: 1 1 auto;
     /* makes `main` take up remaining space between header and footer */
+    flex: 1 1 auto;
     padding: 0 15%;
 }
 
@@ -217,7 +225,6 @@ footer {
     white-space: nowrap;
     width: 1px;
 }
-
 
 .visually-hidden:active,
 .visually-hidden:focus {
@@ -293,7 +300,7 @@ footer {
 }
 
 .tonks-video video {
-    border: 1px solid var(--accent-color-1);
+    border: 1px solid var(--contrast-color);
     box-shadow: var(--box-shadow-accent);
 }
 
