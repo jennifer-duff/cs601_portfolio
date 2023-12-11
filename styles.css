@@ -374,6 +374,19 @@ h3.resume-subsection-title {
 }
 
 /* ------------ Contact Page ------------ */
+.contact-content-container {
+    display: flex;
+    column-gap: 5%;
+}
+
+.contact-content-container h2 {
+    margin-bottom: 10px;
+}
+
+.contact-content-container section {
+    width: 50%;
+}
+
 table {
     box-shadow: var(--box-shadow-accent);
 }
@@ -391,7 +404,7 @@ td {
 }
 
 th {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
 }
 
 .where-cell {
@@ -409,7 +422,76 @@ th {
     height: 1.75rem;
 }
 
+form {
+    box-shadow: var(--box-shadow-accent);
+    border: 1px solid var(--contrast-color);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.input-wrapper {
+    display: flex;
+    column-gap: 10px;
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    flex-grow: 1;
+    font-family: var(--sanserif-font);
+    font-weight: 400;
+    font-size: 12pt;
+    background-color: var(--contrast-color);
+}
+
+textarea {
+    resize: vertical;
+}
+
+#submit-btn {
+    background-color: var(--accent-color-1);
+    font-family: var(--sanserif-font);
+    font-size: 14pt;
+    font-weight: 700;
+    padding: 5px 10px;
+    border: 1px solid var(--accent-color-1);
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+    width: fit-content;
+}
+
+#submit-btn:hover,
+#submit-btn:focus,
+#submit-btn:active {
+    transform: scale(1.1);
+}
+
+#success-msg {
+    font-size: 20pt;
+    border: 1px solid var(--contrast-color);
+    box-shadow: var(--box-shadow-accent);
+    width: fit-content;
+    padding: 15px 25px;
+}
+
 /* ------------ Responsive Adaptations ------------ */
+@media (max-width: 1600px) {
+    .contact-content-container {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .contact-content-container section {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1490px) {
     main {
         padding: 0 10%;

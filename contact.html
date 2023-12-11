@@ -20,43 +20,74 @@
 
     <main>
         <h1>contact me</h1>
-        <table>
-            <tr>
-                <th>Where</th>
-                <th>How</th>
-            </tr>
-            <tr>
-                <td class="where-cell">
-                    <img src="./assets/linkedin-logo.png" class="where-img" alt="LinkedIn logo" height="1.75rem"
-                        width="auto">
-                    <p>LinkedIn</p>
-                </td>
-                <td>
-                    <a href="https://www.linkedin.com/in/jenniferdbowser/"
-                        target="_blank">linkedin.com/in/jenniferdbowser/</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="where-cell">
-                    <img src="./assets/github-logo.svg" class="where-img" alt="GitHub logo" height="1.75rem"
-                        width="auto">
-                    <p>GitHub</p>
-                </td>
-                <td>
-                    <a href="https://github.com/jennifer-duff" target="_blank">github.com/jennifer-duff</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="where-cell">
-                    <img src="./assets/emojis/envelope_emoji.png" class="where-img" alt="Envelope Emoji"
-                        height="1.75rem" width="auto">
-                    <p>Email</p>
-                </td>
-                <td>
-                    <a href="mailto:jdbowser@bu.edu">jdbowser@bu.edu</a>
-                </td>
-            </tr>
-        </table>
+        <div class="contact-content-container">
+            <section>
+                <h2>look me up:</h2>
+                <table>
+                    <tr>
+                        <th>Where</th>
+                        <th>How</th>
+                    </tr>
+                    <tr>
+                        <td class="where-cell">
+                            <img src="./assets/linkedin-logo.png" class="where-img" alt="LinkedIn logo" height="1.75rem"
+                                width="auto">
+                            <p>LinkedIn</p>
+                        </td>
+                        <td>
+                            <a href="https://www.linkedin.com/in/jenniferdbowser/"
+                                target="_blank">linkedin.com/in/jenniferdbowser/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="where-cell">
+                            <img src="./assets/github-logo.svg" class="where-img" alt="GitHub logo" height="1.75rem"
+                                width="auto">
+                            <p>GitHub</p>
+                        </td>
+                        <td>
+                            <a href="https://github.com/jennifer-duff" target="_blank">github.com/jennifer-duff</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="where-cell">
+                            <img src="./assets/emojis/envelope_emoji.png" class="where-img" alt="Envelope Emoji"
+                                height="1.75rem" width="auto">
+                            <p>Email</p>
+                        </td>
+                        <td>
+                            <a href="mailto:jdbowser@bu.edu">jdbowser@bu.edu</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>shoot me a message:</h2>
+                <div id="form-wrapper">
+                    <form name="contact-form" action="dummy-link" method="POST">
+
+                        <div class="input-wrapper">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" name="firstName" id="firstName" required>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" name="lastName" id="lastName" required>
+                        </div>
+
+                        <div class="text-area">
+                            <label for="message">What's on your mind?</label>
+                            <textarea id="message" name="message" rows="4" wrap="soft" required></textarea>
+                        </div>
+
+                        <button type="submit" name="submit-btn" id="submit-btn">submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
     </main>
 
     <footer id="footer"></footer>
@@ -65,6 +96,7 @@
     <script src="./scripts/components/header.js"></script>
     <script src="./scripts/components/footer.js"></script>
     <script src="./scripts/mobileNav.js"></script>
+    <script src="./scripts/formSubmission.js"></script>
 
 </body>
 
