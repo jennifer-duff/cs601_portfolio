@@ -25,6 +25,7 @@ document.addEventListener("click", (event) => {
     }
 });
 
+// Toggles visability of the menu icon based on browser width
 function showHideMenuIcon(windowWidth) {
     if (windowWidth <= MOBILE_WIDTH_BREAKPOINT) {
         menuIcon.style.display = "inline-block";
@@ -36,11 +37,13 @@ function showHideMenuIcon(windowWidth) {
     }
 }
 
+// Shows the mobile navigation pop-up
 function showMobileNav() {
     nav.classList.add('mobile-nav');
     nav.classList.remove("visually-hidden");
 }
 
+// Hides the mobile navigation pop-up
 function hideMobileNav() {
     nav.classList.add("visually-hidden");
     nav.classList.remove('mobile-nav');
