@@ -16,9 +16,12 @@ window.addEventListener("resize", () => {
 // Handle clicks on/off the mobile menu/navigation
 document.addEventListener("click", (event) => {
     if (windowWidth <= MOBILE_WIDTH_BREAKPOINT) {
+        // Shows mobile navigation modal when the menu icon is clicked
         if (event.target === menuIcon) {
             showMobileNav();
         }
+        // Hides the mobile navigation if clicks occur
+        // that are NOT within the mobile navigation modal
         else if (!nav.contains(event.target)) {
             hideMobileNav();
         }
@@ -37,15 +40,14 @@ function showHideMenuIcon(windowWidth) {
     }
 }
 
-// Shows the mobile navigation pop-up
+// Shows the mobile navigation modal
 function showMobileNav() {
     nav.classList.add('mobile-nav');
     nav.classList.remove("visually-hidden");
 }
 
-// Hides the mobile navigation pop-up
+// Hides the mobile navigation modal
 function hideMobileNav() {
     nav.classList.add("visually-hidden");
     nav.classList.remove('mobile-nav');
 }
-

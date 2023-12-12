@@ -31,6 +31,12 @@ body {
     margin: 0;
 }
 
+main {
+    /* makes `main` take up remaining space between header and footer */
+    flex: 1 1 auto;
+    padding: 0 15%;
+}
+
 h1,
 h2,
 h3,
@@ -149,12 +155,6 @@ nav {
 .menu a:focus,
 .menu a.current-page {
     text-decoration: underline solid 4px var(--accent-color-1);
-}
-
-main {
-    /* makes `main` take up remaining space between header and footer */
-    flex: 1 1 auto;
-    padding: 0 15%;
 }
 
 .caption {
