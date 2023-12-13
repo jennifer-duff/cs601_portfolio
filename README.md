@@ -1,5 +1,8 @@
 # JBD Development - Portfolio Site
 
+## Site Purpose
+This website is a personal portfolio showcasing my abilities as a web developer and software engineer.
+
 ## Site Design
 A 3-color palette is used (dark navy blue, cream, and rose red). The design is clean, simple, and has a "dark mode" asthetic. 
 
