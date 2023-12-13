@@ -99,6 +99,13 @@ Vue components are used for the header and footer, which are found on every page
 ## DOM Updates
 The DOM is updated on the “Contact” page when the user submits the message form. On submit, the inner HTML of the div containing the form is updated: the form is replaced with text thanking the user for their message.
 
+## Accessibility
+Accessibility is taken into acount in several ways:
+
+- A `<noscript>` tag is added to the `<header>` on each page to alert the user to the fact that site navigation is nonfunctional when JavaScript is disabled.
+- All content is still useable with CSS and/or images disabled.
+- The mobile navigation is still readable by screen readers even when visually hidden.
+
 ## Extras
 The site uses flexbox extensively. The `<body>` of every page is a flexbox. This allows each page’s content to be properly aligned vertically and horizontally, and it also allows the `<main>` section to fill the remaining space between the header and footer (via the `flex` property), even if the page’s content doesn’t naturally take up at least that height. The `<header>` is also a flexbox to facilitate proper alignment of its contents, as is the `.menu` class within it. The primary content of most pages is also contained within a flexbox (see: the `.home-content` and `#intro-box` sections of the “Home” page, the `.about-section` class on the “About” page, the `.project-content` class on the “Portfolio” page, and the `.contact-content-container` class on the “Contact” page). There are also many other elements that use flexbox – altogether there are 17 flexbox instances on the site.
 
